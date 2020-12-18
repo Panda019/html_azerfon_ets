@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>User_edit | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <link rel="stylesheet" href="css/jquery.ui.all.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery.ui.core.js"></script>
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.ui.datepicker.js"></script>
+    <script src="js/enhance.js"></script>
+    <script src="js/jQuery.fileinput.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('form').jqTransform({imgPath:'images/interface/'});
+        });
+    </script>
+        <script type="text/javascript">
+
+        $(function() {
+            $('#file1').customFileInput();
+            $('#file2').customFileInput();
+            $('#file3').customFileInput();
+        });
+    </script>
+    </head>
+    <body>
+
+<!--HEADER-->
+<div class="b-header">
+      <div class="b-sidebar_top">
+    <div class="b-nav-system_top">
+          <ul class="list">
+        <li class="item"><a href="#">Locations</a></li>
+        <li class="item"><a href="#">POIs</a></li>
+        <li class="item"><a href="#">Groups</a></li>
+        <li class="item"><span class="active">Users</span></li>
+        <li class="item"><a href="#">Preferences</a></li>
+      </ul>
+        </div>
+    <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+    <div class="b-divider__sidebar_top"></div>
+    <div class="b-choice_lang">
+          <div class="b-sort_tools">
+        <ul class="list" id="sort">
+              <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+            <ul class="dropdown d2">
+                  <li class="lang"><a href="#">ENG</a></li>
+                  <li class="lang"><a href="#">AZ</a></li>
+                </ul>
+          </li>
+            </ul>
+      </div>
+        </div>
+    <a href="#" class="b-pin__user">
+        <div class="user-pic">
+      <div class="b-pic-user"></div>
+    </div>
+        <div class="b-user-name">Name Surname</div>
+        <div class="b-drop__arrrow"></div>
+        </a></div>
+      <div class="clear"></div>
+      <div class="b-header__index">
+    <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+    <div class="b-name_service">
+          <div class="index">Employee Tracking System</div>
+          <div class="b-type_service">Service</div>
+        </div>
+    <div class="b-page-title">Users</div>
+  </div>
+    </div>
+
+<!--CONTENT-->
+
+<div class="b-content_info-panel i-content__width_user-form">
+      <div class="b-filter__panel_low-position">
+    <div class="item_title"> ADD/EDIT USER</div>
+  </div>
+      <div class="clear"></div>
+      <div class="b-divider"></div>
+      <form action="" method="get">
+    <div class="b-form-wrap">
+          <div class="i-width__one-of-two_left">
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">FIRST NAME</label>
+              <input class="b-input_text i-input_text_user-edit" type="text" placeholder="Login"/>
+            </div>
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">SURNAME</label>
+              <input class="b-input_text i-input_text_user-edit" type="text" placeholder="Login"/>
+            </div>
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">GENDER</label>
+              <select name="#" class="i-input_select_user-edit">
+            <option value="opt1">Male</option>
+            <option value="opt2">Female</option>
+          </select>
+            </div>
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">BIRTHDAY</label>
+              <input type="text" class="b-input_text i-input_text_user-edit" id="datepicker"
+                           placeholder="dd/mm/yyyy">
+            </div>
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">POSITION</label>
+              <input class="b-input_text i-input_text_user-edit" type="text" placeholder="Position"/>
+            </div>
+        <div class="b-form-item_user-edit">
+              <label class="b-label_default">E-MAIL</label>
+              <input class="b-input_text i-input_text_user-edit" type="text" placeholder="E-mail"/>
+            </div>
+      </div>
+          <div class="i-width__one-of-two_right">
+        <div class="b-form-item_wided_right">
+              <label class="b-label_default">PHONE NUMBER</label>
+              <input class="b-input_text i-input_text_user-edit i-input_text_user-phone-mumber" type="text" placeholder="+888 88 888 88 88"/>
+            </div>
+        <div class="b-form-item_wided_right">
+              <label class="b-label_default">UPLOADED PHOTO</label>
+              <div class="b-pic_upload"><img src="images/tmp/img_upload.png" width="300" height="240"></div>
+            </div>
+        <div class="b-form-item_wided_right">
+              <label class="b-label_default">PHOTO</label>
+              <input type="file" name="file" id="file3"/>
+              <div class="b-file-upload__info">File <a href="#">filename.ext</a> uploaded</div>
+            </div>
+      </div>
+          <div class="clear"></div>
+        </div>
+    <div class="b-divider"></div>
+    <div class="b-form_tools_in-form">
+          <div class="b-form_tools__item">
+        <input class="b-pin_cancel" type="button" value="CANCEL">
+      </div>
+          <div class="b-form_tools__item">
+        <input class="b-pin_save" type="button" value="CREATE">
+      </div>
+        </div>
+  </form>
+    </div>
+
+<!--FOOTER-->
+
+<div class="b-footer">
+      <div class="index">
+    <div class="item"><a href="#">Help</a></div>
+    <div class="item"><a href="#">Terms of use</a></div>
+  </div>
+      <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

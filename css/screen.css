@@ -1,0 +1,221 @@
+/*HTML CONTENT*/
+
+@media screen and (min-height: 0px) and (max-height: 1191px) {
+.height-about-main {
+	min-height: 500px;
+}
+
+
+@media screen and (min-height: 992px) and (max-height: 4000px) {
+.height-about-main {
+	min-height: 420px;
+}
+@media screen and (min-height: 0px) and (max-height: 350px) {
+    .b-content_info-panel {
+        height: 200px;
+        margin-bottom: 45px;
+
+    }
+}
+
+@media screen and (min-height: 350px) and (max-height: 400px) {
+    .b-content_info-panel {
+        height: 200px;
+
+    }
+}
+
+@media screen and (min-height: 400px) and (max-height: 450px) {
+    .b-content_info-panel {
+        height: 61%;
+
+    }
+}
+
+@media screen and (min-height: 450px) and (max-height: 500px) {
+    .b-content_info-panel {
+        height: 65%;
+    }
+
+}
+
+@media screen and (min-height: 500px) and (max-height: 550px) {
+    .b-content_info-panel {
+        height: 68%;
+    }
+}
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+    .b-content_info-panel {
+        height: 71%;
+    }
+}
+
+@media screen and (min-height: 600px) and (max-height: 650px) {
+    .b-content_info-panel {
+        height: 73%;
+    }
+}
+
+@media screen and (min-height: 650px) and (max-height: 700px) {
+    .b-content_info-panel {
+        height: 75%;
+    }
+}
+
+@media screen and (min-height: 700px) and (max-height: 750px) {
+    .b-content_info-panel {
+        height: 77%;
+    }
+}
+
+@media screen and (min-height: 750px) and (max-height: 800px) {
+    .b-content_info-panel {
+        height: 78%;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 850px) {
+    .b-content_info-panel {
+        height: 80%;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 900px) {
+    .b-content_info-panel {
+        height: 81%;
+    }
+}
+
+@media screen and (min-height: 900px) and (max-height: 950px) {
+    .b-content_info-panel {
+        height: 82%;
+    }
+}
+
+@media screen and (min-height: 950px) and (max-height: 1000px) {
+    .b-content_info-panel {
+        height: 83%;
+    }
+}
+
+@media screen and (min-height: 1000px) and (max-height: 1050px) {
+    .b-content_info-panel {
+        height: 84%;
+    }
+}
+
+@media screen and (min-height: 1050px) and (max-height: 2000px) {
+    .b-content_info-panel {
+        height: 85%;
+    }
+}
+
+/*MAP CONTENT*/
+
+@media screen and (min-height: 0px) and (max-height: 350px) {
+    .b-content_info-panel_map-incl {
+        height: 200px;
+        margin-bottom: 45px;
+
+    }
+}
+
+@media screen and (min-height: 350px) and (max-height: 400px) {
+    .b-content_info-panel_map-incl {
+        height: 241px;
+
+    }
+}
+
+@media screen and (min-height: 400px) and (max-height: 450px) {
+    .b-content_info-panel_map-incl {
+        height: 75%;
+
+    }
+}
+
+@media screen and (min-height: 450px) and (max-height: 500px) {
+    .b-content_info-panel_map-incl {
+        height: 77%;
+    }
+
+}
+
+@media screen and (min-height: 500px) and (max-height: 550px) {
+    .b-content_info-panel_map-incl {
+        height: 78%;
+    }
+}
+
+@media screen and (min-height: 550px) and (max-height: 600px) {
+    .b-content_info-panel_map-incl {
+        height: 79%;
+    }
+}
+
+@media screen and (min-height: 600px) and (max-height: 650px) {
+    .b-content_info-panel_map-incl {
+        height: 80%;
+    }
+}
+
+@media screen and (min-height: 650px) and (max-height: 700px) {
+    .b-content_info-panel_map-incl {
+        height: 81%;
+    }
+}
+
+@media screen and (min-height: 700px) and (max-height: 750px) {
+    .b-content_info-panel_map-incl {
+        height: 82%;
+    }
+}
+
+@media screen and (min-height: 750px) and (max-height: 800px) {
+    .b-content_info-panel_map-incl {
+        height: 83%;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 850px) {
+    .b-content_info-panel_map-incl {
+        height: 84%;
+    }
+}
+
+@media screen and (min-height: 850px) and (max-height: 900px) {
+    .b-content_info-panel_map-incl {
+        height: 85%;
+    }
+}
+
+@media screen and (min-height: 900px) and (max-height: 950px) {
+    .b-content_info-panel_map-incl {
+        height: 85%;
+    }
+}
+
+@media screen and (min-height: 950px) and (max-height: 1000px) {
+    .b-content_info-panel_map-incl {
+        height: 85%;
+    }
+}
+
+@media screen and (min-height: 1000px) and (max-height: 1050px) {
+    .b-content_info-panel_map-incl {
+        height: 85%;
+    }
+}
+
+@media screen and (min-height: 1050px) and (max-height: 2000px) {
+    .b-content_info-panel_map-incl {
+        height: 85%;
+    }
+}
+
+
+
+
+
+

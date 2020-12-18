@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Admin_settings_add_edit | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Customer Manajement</a></li>
+                    <li class="item"><a href="#">Messages</a></li>
+                    <li class="item"><span class="active">Preferences</span></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-page-title">Preferenses</div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel i-content__width_user-form">
+        <div class="b-filter__panel_low-position">
+            <div class="item_title"> ADD/EDIT USER</div>
+        </div>
+        <div class="clear"></div>
+        <div class="b-divider"></div>
+        <form action="" method="get">
+            <div class="b-form-wrap">
+                <div class="i-width__one-of-two_left">
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">SMS ID*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">SMSC IP ADDRESS*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">SMSC PORT*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">BIND SYSTEM ID*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">BIND SYSTEM PASSWORD*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="password"/>
+                    </div>
+                    <div class="b-form-item_wided">
+                        <label class="b-label_default">BIND SYSTEM TYPE*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="type"/>
+                    </div>
+                </div>
+                <div class="i-width__one-of-two_right">
+                    <div class="b-form-item_wided_right">
+                        <label class="b-label_default">REGISTER DELIVERY*</label>
+                    
+                        <select name="#" class="i-input_select_user-edit">
+                            <option value="opt1" selected>No notification</option>
+                            <option value="opt2">Lorem ipsum</option>
+                            <option value="opt3">Dolor sit amet</option>
+                            <option value="opt3">Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit</option>
+
+                            <option value="opt1" selected>No notification</option>
+                            <option value="opt2">Lorem ipsum</option>
+                            <option value="opt3">Dolor sit amet</option>
+                            <option value="opt3">Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit</option>
+
+                            <option value="opt1">No notification</option>
+                            <option value="opt2">Lorem ipsum</option>
+                            <option value="opt3">Dolor sit amet</option>
+                            <option value="opt3">Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit</option>
+
+
+                            <option value="opt1">No notification</option>
+                            <option value="opt2">Lorem ipsum</option>
+                            <option value="opt3">Dolor sit amet</option>
+                            <option value="opt3">Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit Consecteur adipising elit</option>
+                        </select>
+                    
+                    </div>
+                    <div class="b-form-item_wided_right">
+                        <label class="b-label_default">BIND INTERFACE VERSION*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided_right">
+                        <label class="b-label_default">BIND ADDRESS TON*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided_right">
+                        <label class="b-label_default">BIND ADDRESS NPI*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                    <div class="b-form-item_wided_right">
+                        <label class="b-label_default">BIND ADDRESS RANGE*</label>
+                        <input class="b-input_text i-input_text_user-edit" type="text" placeholder="0"/>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="b-divider"></div>
+            <div class="b-form_tools_in-form">
+                <div class="b-form_tools__item">
+                    <input class="b-pin_cancel" type="button" value="CANCEL">
+                </div>
+                <div class="b-form_tools__item">
+                    <input class="b-pin_save" type="button" value="CREATE">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Users_list | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Locations</a></li>
+                    <li class="item"><a href="#">POIs</a></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><span class="active">Users</span></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-page-title">Users</div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel i-content__width_users-list">
+        <div class="b-filter__panel">
+            <form action="" method="get">
+                <div class="item">
+                    <input class="b-input_text_search" type="text" placeholder="Search"/>
+                </div>
+                <div class="item">
+                    <select name="#">
+                        <option value="opt1">All Groups</option>
+                        <option value="opt2">Lorem</option>
+                        <option value="opt3">Ipsum</option>
+                        <option value="opt4">Dolor sit</option>
+                        <option value="opt5">Amet</option>
+                        <option value="opt7">Consecteur</option>
+                        <option value="opt8">Adipising</option>
+                        <option value="opt9">Elit</option>
+                        <option value="opt10">Nulliam</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <input name="" type="button" class="b-pin_search">
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="b-filter__panel_low-position">
+            <div class="item_title"> CUSTOMER LIST</div>
+            <div class="b-tools-panel__index">
+                <div class="sort_txt">SORT BY:</div>
+                <div class="sort">
+                    <div class="b-sort_tools">
+                        <ul class="list" id="sort">
+                            <li><a class="fly" href="#url" tabindex="1">USER NAME</a>
+                                <ul class="dropdown d2">
+                                    <li class="current">USER NAME</li>
+                                    <li><a href="#">GROUP TITLE</a></li>
+                                    <li class="current">PHONE NUMBER</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <table border="0" cellpadding="0" cellspacing="0" class="list">
+            <tbody>
+                <tr>
+                    <th> <span class="b-table__th_title">Name Surname</span>
+            </th>
+            <th> <span class="b-table__th_title">Phone Number</span>
+            </th>
+            <th> <span class="b-table__th_title">Group</span>
+            </th>
+            <th> <span class="b-table__th_title">Actions</span>
+            </th>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            <tr>
+                <td>Name Surname</td>
+                <td>+888 88 888 88 88</td>
+                <td>Group title</td>
+                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16" height="16"
+                                                              title="Lorem ipsum"></a></div></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="PagesFlickr">
+            <div class="Paginator"><a href="#" class="arrow-first"></a> <a href="#" class="arrow-prev"></a> <span
+                    class="this-page">1</span> <a href="/search/?q=tes&amp;page=2">2</a> <a
+                    href="/search/?q=tes&amp;page=3">3</a> <a href="/search/?q=tes&amp;page=4">4</a> <a
+                    href="/search/?q=tes&amp;page=5">5</a> <a href="/search/?q=tes&amp;page=6">6</a> <a
+                    href="/search/?q=tes&amp;page=7">7</a> <span class="break">...</span> <a href="#"
+                    class="arrow-next"></a> <a
+                    href="#" class="arrow-last"></a></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

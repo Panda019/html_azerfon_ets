@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>03 | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui-timepicker-addon.css"/>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.example-container').each(function(i) {
+                eval($(this).text());
+            });
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($) {
+            $(window).load(function() {
+                $("#content_1").mCustomScrollbar({
+                    scrollButtons: {
+                        enable: true
+                    }
+                });
+                $("#content_1").hover(function() {
+                    $(document).data({"keyboard-input": "enabled"});
+                    $(this).addClass("keyboard-input");
+                }, function() {
+                    $(document).data({"keyboard-input": "disabled"});
+                    $(this).removeClass("keyboard-input");
+                });
+                $(document).keydown(function(e) {
+                    if ($(this).data("keyboard-input") === "enabled") {
+                        var activeElem = $(".keyboard-input"),
+                                activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top),
+                                pixelsToScroll = 60;
+                        if (e.which === 38) { //scroll up
+                            e.preventDefault();
+                            if (pixelsToScroll > activeElemPos) {
+                                activeElem.mCustomScrollbar("scrollTo", "top");
+                            } else {
+                                activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                            }
+                        } else if (e.which === 40) { //scroll down
+                            e.preventDefault();
+                            activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                        }
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><span class="active">Locations</span></li>
+                    <li class="item"><a href="#">POIs</a></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Users</a></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-action-set"><a href="#" class="b-input-button_tools">
+                    <div class="icon"><img src="images/icons/icon-add.png" width="24" height="24"></div>
+                    <div class="index">SHOW PANELS</div>
+                </a></div>
+            <div class="b-page-title">Locations</div>
+        </div>
+    </div>
+
+    <!--CONTENT_PANELS-->
+    <div class="b-panel_info i-panel-info_extended">
+        <div class="b-panel_info__index_extended">
+            <form>
+                <div class="b-panel_info__index i-panel_info__index_no-border i-panel_info__index_multirow">
+                    <div class="b-info-panel__item">
+                        <input class="b-input_text_search i-input_text_search_short" type="text" placeholder="Search"/>
+                    </div>
+                    <div class="b-info-panel__item">
+                        <select name="select1" class="i-select__width_fixed">
+                            <option value="opt1">All Groups</option>
+                            <option value="opt2">Lorem</option>
+                            <option value="opt3">Ipsum</option>
+                            <option value="opt4">Dolor sit</option>
+                            <option value="opt5">Amet</option>
+                            <option value="opt7">Consecteur</option>
+                            <option value="opt8">Adipising</option>
+                            <option value="opt9">Elit</option>
+                            <option value="opt10">Nulliam</option>
+                        </select>
+                    </div>
+                    <div class="example-container">
+                        <div class="b-info-panel__item">
+                            <input type="text" class="b-input_text_date-time_in-panels" id="date-time_from" value=""
+                                   placeholder="00/00/0000 00:00"/>
+                            <pre style="display:none;">
+var myControl=  {
+	create: function(tp_inst, obj, unit, val, min, max, step){
+		$('&lt;input class="ui-timepicker-input" value="'+val+'" style="width:50%"&gt;')
+			.appendTo(obj)
+			.spinner({
+				min: min,
+				max: max,
+				step: step,
+				change: function(e,ui){ // key events
+						// don't call if api was used and not key press
+						if(e.originalEvent !== undefined)
+							tp_inst._onTimeChange();
+						tp_inst._onSelectHandler();
+					},
+				spin: function(e,ui){ // spin events
+						tp_inst.control.value(tp_inst, obj, unit, ui.value);
+						tp_inst._onTimeChange();
+						tp_inst._onSelectHandler();
+					}
+			});
+		return obj;
+	},
+	options: function(tp_inst, obj, unit, opts, val){
+		if(typeof(opts) == 'string' && val !== undefined)
+				return obj.find('.ui-timepicker-input').spinner(opts, val);
+		return obj.find('.ui-timepicker-input').spinner(opts);
+	},
+	value: function(tp_inst, obj, unit, val){
+		if(val !== undefined)
+			return obj.find('.ui-timepicker-input').spinner('value', val);
+		return obj.find('.ui-timepicker-input').spinner('value');
+	}
+};
+
+$('#date-time_from').datetimepicker({
+	controlType: myControl
+});
+                            </pre>
+                        </div>
+                        <div class="b-info-panel__item">
+                            <div class="b-icon__to"></div>
+                        </div>
+                        <div class="example-container">
+                            <div class="b-info-panel__item">
+                                <input type="text" class="b-input_text_date-time_in-panels" id="date-time_to" value=""
+                                       placeholder="00/00/0000 00:00"/>
+                                <pre style="display:none;">
+var myControl=  {
+	create: function(tp_inst, obj, unit, val, min, max, step){
+		$('&lt;input class="ui-timepicker-input" value="'+val+'" style="width:50%"&gt;')
+			.appendTo(obj)
+			.spinner({
+				min: min,
+				max: max,
+				step: step,
+				change: function(e,ui){ // key events
+						// don't call if api was used and not key press
+						if(e.originalEvent !== undefined)
+							tp_inst._onTimeChange();
+						tp_inst._onSelectHandler();
+					},
+				spin: function(e,ui){ // spin events
+						tp_inst.control.value(tp_inst, obj, unit, ui.value);
+						tp_inst._onTimeChange();
+						tp_inst._onSelectHandler();
+					}
+			});
+		return obj;
+	},
+	options: function(tp_inst, obj, unit, opts, val){
+		if(typeof(opts) == 'string' && val !== undefined)
+				return obj.find('.ui-timepicker-input').spinner(opts, val);
+		return obj.find('.ui-timepicker-input').spinner(opts);
+	},
+	value: function(tp_inst, obj, unit, val){
+		if(val !== undefined)
+			return obj.find('.ui-timepicker-input').spinner('value', val);
+		return obj.find('.ui-timepicker-input').spinner('value');
+	}
+};
+
+$('#date-time_to').datetimepicker({
+	controlType: myControl
+});
+                                </pre>
+                            </div>
+                            <div class="b-info-panel__item">
+                                <input name="" type="button" class="b-pin_search" title="Search">
+                            </div>
+                            <div class="b-icon-set_tools">
+                                <div class="icon-set_tools">
+                                    <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-close.png" width="16"
+                                                                                   height="16" title="Lorem ipsum"></a></div>
+                                </div>
+                                <div class="icon-set_tools">
+                                    <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-3.png" width="16"
+                                                                                   height="16" title="Lorem ipsum"></a></div>
+                                </div>
+                                <div class="icon-set_tools">
+                                    <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-2.png" width="16"
+                                                                                   height="16" title="Lorem ipsum"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="b-filter__panel_low-position_extended">
+                        <div class="item_title"> CUSTOMER LIST</div>
+                        <div class="b-tools-panel__index">
+                            <div class="sort_txt">SORT BY:</div>
+                            <div class="sort">
+                                <div class="b-sort_tools">
+                                    <ul class="list" id="sort">
+                                        <li><a class="fly" href="#url" tabindex="1">LAST LOCATION TIME</a>
+                                            <ul class="dropdown d2">
+                                                <li><a href="#">NAME SURNAME</a></li>
+                                                <li><a href="#">GROUP</a></li>
+                                                <li class="current">LAST LOCATION TIME</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="b-divider"></div>
+        <div class="b-scroll_panel__wrap_with-sort">
+            <div id="content_1" class="b-scroll-panel_extended">
+                <form>
+                    <table border="0" cellpadding="0" cellspacing="0" class="list">
+                        <tbody>
+                            <tr>
+                                <th> <span class="b-table__th_title">
+                            <div class="b-table__td_transformed">
+                                <input type="checkbox" name="chbox" id="">
+                            </div>
+                        </span>
+                        </th>
+                        <th> <span class="b-table__th_title">Name Surname</span>
+                        </th>
+                        <th> <span class="b-table__th_title">Phone Number</span>
+                        </th>
+                        <th> <span class="b-table__th_title">Group</span>
+                        </th>
+                        <th> <span class="b-table__th_title">Last Location Update</span>
+                        </th>
+                        <th> <span class="b-table__th_title">Actions</span>
+                        </th>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="chbox" >
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                     <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                        <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id"><div class="b-table__td_transformed">
+                                    <input type="checkbox" name="#">
+                                </div></td>
+                            <td>Name Surname</td>
+                            <td>+888 88 888 88 88</td>
+                            <td>Very long group name</td>
+                            <td>00:00 - 00.00.0000</td>
+                            <td><div class="actions-set"><a href="#"><img src="images/icons/icon-show-on-map.png" width="16"
+                                                                          height="16"
+                                                                          title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-history.png" width="16"
+                                                                          height="16"
+                                                                          title="Dolor sit"></a></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <div class="b-info_panel_low-position">
+            <div class="item_title">SEND MESSAGE <span>TO SELECTED:</span> <span>99 USERS</span></div>
+            <div class="b-info_panel_element__wrap">
+                <label class="b-label_default">MESSAGE</label>
+                <textarea name="" class="b-input_textarea i-input_textarea_height_2row" rows="2"></textarea>
+                <div class="clear"></div>
+                <div class="b-form_tools_in-panel">
+                    <div class="b-counts_in-textarea"> <span>160</span> <span>CHARACTERS LEFT</span> </div>
+                    <div class="b-form_tools_in-panel__item_inputs">
+                        <input class="b-pin_save" type="button" value="SEND">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--END_OF_CONTENT_PANELS--> 
+
+    <!--CONTENT_MAP-->
+
+    <div class="b-content_info-panel_map-incl" style="background-image:url(images/tmp/map.png)">
+        <div style="float:left; padding:40px;">
+            <div class="b-bubble">
+                <div class="b-user-pic"><img src="images/tmp/user.png" width="48" height="48"></div>
+                <div class="b-bubble__index">
+                    <div class="user-name">Name Surname</div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><img src="images/icons/icon-phone.png" width="16" height="16"></div>
+                        <div class="tools-item__index">+888 88 888 88 88</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><img src="images/icons/icon-clock.png" width="16" height="16"></div>
+                        <div class="tools-item__index">16:45 - 05.04.2013</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><a href="#"><img src="images/icons/icon-mail.png" width="16" height="16"></a> </div>
+                        <div class="tools-item__index"><a href="#">SEND MESSAGE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left; padding:40px;">
+            <div class="b-bullet_employee"></div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

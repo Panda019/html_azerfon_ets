@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Alert | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><span class="active">Locations</span></li>
+                    <li class="item"><a href="#">POIs</a></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Users</a></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-action-set"><a href="#" class="b-input-button_tools">
+                    <div class="icon"><img src="images/icons/icon-add.png" width="24" height="24"></div>
+                    <div class="index">ADD NEW</div>
+                </a></div>
+            <div class="b-page-title">Locations</div>
+        </div>
+    </div>
+
+    <!--CONTENT_PANELS--> 
+
+    <!--END_OF_CONTENT_PANELS-->
+    <div class="b-panel_info i-panel-info_short">
+        <div class="b-panel_info__index i-panel_info__index_multirow">
+            <input name="" type="text" class="b-input_text_search-on-map" placeholder="Search">
+            <input name="" type="button" class="b-pin_search_in-input" title="Search">
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-3.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-2.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-1.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="tools-panel">
+                <div class="link-block"><a href="#" title="Show all on map">SHOW ALL ON MAP</a></div>
+                <div class="b-tools-panel__index">
+                    <div class="sort_txt">SORT BY:</div>
+                    <div class="sort">
+                        <div class="b-sort_tools">
+                            <ul class="list" id="sort">
+                                <li><a class="fly" href="#url" tabindex="1">LAST LOCATION TIME</a>
+                                    <ul class="dropdown d2">
+                                        <li><a href="#">NAME SURNAME</a></li>
+                                        <li><a href="#">GROUP</a></li>
+                                        <li class="current">LAST LOCATION TIME</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="b-panel_info__index">
+            <div class="user-avatar">
+                <div class="b-pic_user-avatar"><img src="images/tmp/user.png" width="48" height="48"
+                                                    title="Lorem ipsum"></div>
+            </div>
+            <div class="index_user-info">
+                <div class="user-name">Name Surname</div>
+                <div class="item_tools_two_rows"><a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-send-message.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">SEND MESSAGE</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-history.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">HISTORY</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">HIDE ON MAP</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-info.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">INFO</div>
+                    </a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="b-panel_info__index">
+            <div class="user-avatar">
+                <div class="b-pic_user-avatar"><img src="images/tmp/user.png" width="48" height="48"
+                                                    title="Lorem ipsum"></div>
+            </div>
+            <div class="index_user-info">
+                <div class="user-name">Name Surname</div>
+                <div class="item_tools_two_rows"><a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-send-message.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">SEND MESSAGE</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-history.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">HISTORY</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">HIDE ON MAP</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-info.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">INFO</div>
+                    </a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="b-panel_info__index">
+            <div class="user-avatar">
+                <div class="b-pic_user-avatar"><img src="images/tmp/user.png" width="48" height="48"
+                                                    title="Lorem ipsum"></div>
+            </div>
+            <div class="index_user-info">
+                <div class="user-name">Name Surname</div>
+                <div class="item_tools_two_rows"><a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-send-message.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">SEND MESSAGE</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-history.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">HISTORY</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">HIDE ON MAP</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-info.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">INFO</div>
+                    </a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="b-panel_info__index">
+            <div class="user-avatar">
+                <div class="b-pic_user-avatar"><img src="images/tmp/user.png" width="48" height="48"
+                                                    title="Lorem ipsum"></div>
+            </div>
+            <div class="index_user-info">
+                <div class="user-name">Name Surname</div>
+                <div class="item_tools_two_rows"><a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-send-message.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">SEND MESSAGE</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-history.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">HISTORY</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">HIDE ON MAP</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-info.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">INFO</div>
+                    </a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="b-panel_info__index">
+            <div class="user-avatar">
+                <div class="b-pic_user-avatar"><img src="images/tmp/user.png" width="48" height="48"
+                                                    title="Lorem ipsum"></div>
+            </div>
+            <div class="index_user-info">
+                <div class="user-name">Name Surname</div>
+                <div class="item_tools_two_rows"><a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-send-message.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">SEND MESSAGE</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-history.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">HISTORY</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                               height="16"></div>
+                        </div>
+                        <div class="tools-index">HIDE ON MAP</div>
+                    </a> <a href="#" class="tools-block">
+                        <div class="icon-set_tools_user">
+                            <div class="b-pic_icon_16_16"><img src="images/icons/icon-info.png" width="16" height="16"> </div>
+                        </div>
+                        <div class="tools-index">INFO</div>
+                    </a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="PagesFlickr">
+            <div class="Paginator"><a href="#" class="arrow-first" title="First"></a> <a href="#" class="arrow-prev"
+                                                                                         title="Previous"></a> <span
+                                                                                         class="this-page">1</span> <a href="/search/?q=tes&amp;page=2">2</a> <a
+                                                                                         href="/search/?q=tes&amp;page=3">3</a> <a href="/search/?q=tes&amp;page=4">4</a> <a
+                                                                                         href="/search/?q=tes&amp;page=5">5</a> <a href="/search/?q=tes&amp;page=6">6</a> <a
+                                                                                         href="/search/?q=tes&amp;page=7">7</a> <span class="break">...</span> <a href="#" class="arrow-next"
+                                                                                         title="Next"></a> <a
+                                                                                         href="#" class="arrow-last" title="Last"></a></div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel_map-incl" style="background-image:url(images/tmp/map.png)">
+        <div style="float:left; padding:10px;">
+            <div class="b-bubble">
+                <div class="b-user-pic"><img src="images/tmp/user.png" width="48" height="48"></div>
+                <div class="b-bubble__index">
+                    <div class="user-name">Name Surname</div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><img src="images/icons/icon-phone.png" width="16" height="16"></div>
+                        <div class="tools-item__index">+888 88 888 88 88</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><img src="images/icons/icon-clock.png" width="16" height="16"></div>
+                        <div class="tools-item__index">16:45 - 05.04.2013</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="tools-item">
+                        <div class="tools-item__icon"><a href="#"><img src="images/icons/icon-mail.png" width="16" height="16"></a> </div>
+                        <div class="tools-item__index"><a href="#">SEND MESSAGE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left; padding:40px;">
+            <div class="b-bullet_employee"></div>
+        </div>
+        <div style="float:left; padding:10px; float:left;">
+            <div class="b-window_modal">
+                <div class="b-title">HISTORY ALERT</div>
+                <div class="b-pin_close"></div>
+                <div class="b-window_modal__index">Please select user to see its history</div>
+                <div class="b-window_modal__tools-block">
+                    <div class="b-window_modal__tools-block__item">
+                        <input class="b-pin_save_in_modal-window" type="button" value="OK">
+                    </div>
+                    <div class="b-window_modal__tools-block__item">
+                        <input class="b-pin_cancel_in_modal-window" type="button" value="CANCEL">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

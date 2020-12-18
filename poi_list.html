@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Poi_list | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($) {
+            $(window).load(function() {
+                $("#content_1").mCustomScrollbar({
+                    scrollButtons: {
+                        enable: true
+                    }
+                });
+                $("#content_1").hover(function() {
+                    $(document).data({"keyboard-input": "enabled"});
+                    $(this).addClass("keyboard-input");
+                }, function() {
+                    $(document).data({"keyboard-input": "disabled"});
+                    $(this).removeClass("keyboard-input");
+                });
+                $(document).keydown(function(e) {
+                    if ($(this).data("keyboard-input") === "enabled") {
+                        var activeElem = $(".keyboard-input"),
+                                activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top),
+                                pixelsToScroll = 60;
+                        if (e.which === 38) { //scroll up
+                            e.preventDefault();
+                            if (pixelsToScroll > activeElemPos) {
+                                activeElem.mCustomScrollbar("scrollTo", "top");
+                            } else {
+                                activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                            }
+                        } else if (e.which === 40) { //scroll down
+                            e.preventDefault();
+                            activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                        }
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Locations</a></li>
+                    <li class="item"><span class="active">POIs</span></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Users</a></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-action-set"><a href="#" class="b-input-button_tools">
+                    <div class="icon"><img src="images/icons/icon-show-panels.png" width="24" height="24"></div>
+                    <div class="index">SHOW PANELS</div>
+                </a></div>
+            <div class="b-page-title">Point of Interests</div>
+        </div>
+    </div>
+
+    <!--CONTENT_PANELS-->
+
+    <div class="b-panel_info i-panel-info_short">
+        <div class="b-panel_info__index">
+            <div class="title">ALL POIs</div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-3.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-2.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-1.png" width="16" height="16"
+                                                               title="Lorem ipsum"></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <form>
+            <div class="b-panel_info__index i-panel_info__index_no-border i-panel_info__index_multirow">
+                <div class="b-info-panel__item">
+                    <select name="select1" class="i-select__width_fixed">
+                        <option value="opt1">All Groups</option>
+                        <option value="opt2">Lorem</option>
+                        <option value="opt3">Ipsum</option>
+                        <option value="opt4">Dolor sit</option>
+                        <option value="opt5">Amet</option>
+                        <option value="opt7">Consecteur</option>
+                        <option value="opt8">Adipising</option>
+                        <option value="opt9">Elit</option>
+                        <option value="opt10">Nulliam</option>
+                    </select>
+                </div>
+                <div class="b-info-panel__item_last i-float_right">
+                    <input class="b-pin_save" type="button" value="ADD NEW POI" title="Add new POI">
+                </div>
+                <div class="clear"></div>
+                <div class="tools-panel">
+                    <input type="checkbox" name="#">
+                    <label class="b-label_radio-button_checkbox">SHOW ALL</label>
+                    <div class="b-tools-panel__index">
+                        <div class="sort_txt">SORT BY:</div>
+                        <div class="sort">
+                            <div class="b-sort_tools">
+                                <ul class="list" id="sort">
+                                    <li><a class="fly" href="#url" tabindex="1">POI CATEGORY</a>
+                                        <ul class="dropdown d2">
+                                            <li class="current">POI CATEGORY</li>
+                                            <li><a href="#">POI NAME</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="clear"></div>
+        <div class="b-divider"></div>
+        <div class="b-scroll_panel__wrap_with-sort">
+            <div id="content_1" class="b-scroll-panel_poi">
+                <table border="0" cellpadding="0" cellspacing="0" class="list i-background_white">
+                    <tbody>
+                        <tr>
+                            <td width="11%" class="id b-table__item">1</td>
+                            <td width="62%" class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_1.png" width="32" height="32"
+                                                                                                      title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td width="27%" class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                            height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">2</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_2.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">3</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_3.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">4</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_4.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">5</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_5.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">6</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_6.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">7</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_7.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">8</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_8.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">9</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_1.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">10</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_2.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">11</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_3.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">12</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_4.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">13</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_5.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">14</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_6.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                        <tr>
+                            <td class="id b-table__item">15</td>
+                            <td class="b-table__item"><div class="actions-set_32_32"><img src="images/icons/icon-example_7.png" width="32" height="32"
+                                                                                          title="Lorem Ipsum"></div>
+                                <div class="b-table_td__index_poi">POI Title</div>
+                                <div class="b-table_td__localization_poi">POI Category</div></td>
+                            <td class="b-table__item"><div class="actions-set"><a href="#"><img src="images/icons/icon-edit_light.png" width="16"
+                                                                                                height="16" title="Lorem ipsum"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-close.png" width="16" height="16"
+                                                                          title="Dolor Sit"></a></div>
+                                <div class="actions-set"><a href="#"><img src="images/icons/icon-hide-on-map.png" width="16"
+                                                                          height="16" title="Amet Consecteur"></a></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="b-divider"></div>
+    </div>
+
+    <!--END_OF_CONTENT_PANELS--> 
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel_map-incl" style="background-image:url(images/tmp/map.png)">
+        <div style="float:left; padding:40px;">
+            <div class="b-bubble">
+                <div class="b-user-pic"><img src="images/tmp/user.png" width="48" height="48"></div>
+                <div class="b-bubble__index">
+                    <div class="poi-title">POI Title</div>
+                    <div class="clear"></div>
+                    <div class="category-title">CATEGORY</div>
+                    <div class="clear"></div>
+                    <div class="poi-description">Some description here. Lorem ipsum dolor sit amet. Consecteur adipising elit.
+                        Lorem ipsum dolor sit amet </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left; padding:40px;">
+            <div class="b-bullet_employee"></div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

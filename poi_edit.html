@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Poi_edit | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.example-container').each(function(i) {
+                eval($(this).text());
+            });
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($) {
+            $(window).load(function() {
+                $("#content_1").mCustomScrollbar({
+                    scrollButtons: {
+                        enable: true
+                    }
+                });
+                $("#content_1").hover(function() {
+                    $(document).data({"keyboard-input": "enabled"});
+                    $(this).addClass("keyboard-input");
+                }, function() {
+                    $(document).data({"keyboard-input": "disabled"});
+                    $(this).removeClass("keyboard-input");
+                });
+                $(document).keydown(function(e) {
+                    if ($(this).data("keyboard-input") === "enabled") {
+                        var activeElem = $(".keyboard-input"),
+                                activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top),
+                                pixelsToScroll = 60;
+                        if (e.which === 38) { //scroll up
+                            e.preventDefault();
+                            if (pixelsToScroll > activeElemPos) {
+                                activeElem.mCustomScrollbar("scrollTo", "top");
+                            } else {
+                                activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                            }
+                        } else if (e.which === 40) { //scroll down
+                            e.preventDefault();
+                            activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
+                        }
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Locations</a></li>
+                    <li class="item"><span class="active">POIs</span></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Users</a></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-action-set"><a href="#" class="b-input-button_tools">
+                    <div class="icon"><img src="images/icons/icon-show-panels.png" width="24" height="24"></div>
+                    <div class="index">SHOW PANELS</div>
+                </a></div>
+            <div class="b-page-title">Point of Interests</div>
+        </div>
+    </div>
+
+    <!--CONTENT_PANELS-->
+
+    <div class="b-panel_info i-panel-info_short_poi">
+        <div class="b-panel_info__index">
+            <div class="title">ALL POIs</div>
+            <div class="icon-set_tools">
+                <div class="b-pic_icon_16_16"><a href="#"><img src="images/icons/icon-close.png" width="16"
+                                                               height="16" title="Lorem ipsum"></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <form>
+            <div class="b-panel_info__index i-panel_info__index_no-border">
+                <div class="b-info-panel__item_poi-form">
+                    <label class="b-label_default">POI CATEGORY</label>
+                    <select name="select1" class="i-select__width_fixed_short">
+                        <option value="opt1">POI Category</option>
+                        <option value="opt2">Lorem</option>
+                        <option value="opt3">Ipsum</option>
+                        <option value="opt4">Dolor sit</option>
+                        <option value="opt5">Amet</option>
+                        <option value="opt7">Consecteur</option>
+                        <option value="opt8">Adipising</option>
+                        <option value="opt9">Elit</option>
+                        <option value="opt10">Nulliam</option>
+                    </select>
+                </div>
+                <div class="b-info-panel__item_poi-form">
+                    <label class="b-label_default">POI TITLE</label>
+                    <input class="b-input_text" type="text" placeholder="POI Title"/>
+                </div>
+                <div class="b-info-panel__item_poi-form">
+                    <label class="b-label_default">POI DESCRIPTION</label>
+                    <textarea name="" class="b-input_textarea i-input_textarea_poi" placeholder="Poi Description"></textarea>
+                </div>
+                <div class="b-info-panel__item_poi-form">
+                    <label class="b-label_default">LATTUTIDE (CLICK ON MAP)</label>
+                    <input class="b-input_text" type="text" placeholder="0"/>
+                </div>
+                <div class="b-info-panel__item_poi-form_last">
+                    <label class="b-label_default">LONGTUTIDE (CLICK ON MAP)</label>
+                    <input class="b-input_text" type="text" placeholder="0"/>
+                </div>
+                <div class="clear"></div>
+                <div class="b-divider"></div>
+            </div>
+            <div class="b-form_tools_in-form_groups_poi">
+                <div class="b-form_tools__item_groups">
+                    <input class="b-pin_cancel" type="button" value="CANCEL">
+                </div>
+                <div class="b-form_tools__item_groups">
+                    <input class="b-pin_save" type="button" value="CREATE">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--END_OF_CONTENT_PANELS--> 
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel_map-incl" style="background-image:url(images/tmp/map.png)">
+        <div style="float:left; padding:40px;">
+            <div class="b-bubble">
+                <div class="b-user-pic"><img src="images/tmp/user.png" width="48" height="48"></div>
+                <div class="b-bubble__index">
+                    <div class="poi-title">POI Title</div>
+                    <div class="clear"></div>
+                    <div class="category-title">CATEGORY</div>
+                    <div class="clear"></div>
+                    <div class="poi-description">Some description here. Lorem ipsum dolor sit amet. Consecteur adipising
+                        elit. Lorem ipsum dolor sit amet </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left; padding:40px;">
+            <div class="b-bullet_employee"></div>
+        </div>
+        <div style="float:left; padding:10px;">
+            <div class="b-window_modal">
+                <div class="b-title">POI ADD/EDIT ERROR ALERT</div>
+                <div class="b-pin_close"></div>
+                <div class="b-window_modal__index">Please select user to see its history</div>
+                <div class="b-window_modal__tools-block">
+                    <div class="b-window_modal__tools-block__item">
+                        <input class="b-pin_save_in_modal-window" type="button" value="OK">
+                    </div>
+                    <div class="b-window_modal__tools-block__item">
+                        <input class="b-pin_cancel_in_modal-window" type="button" value="CANCEL">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>

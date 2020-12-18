@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Admin_settings_all_tabs | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    <link href="css/SpryTabbedPanels.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/SpryTabbedPanels.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Customer Manajement</a></li>
+                    <li class="item"><a href="#">Messages</a></li>
+                    <li class="item"><span class="active">Preferences</span></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li><a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-action-set"><a href="#" class="b-input-button_tools">
+                    <div class="icon"><img src="images/icons/icon-add.png" width="24" height="24"></div>
+                    <div class="index">ADD NEW</div>
+                </a></div>
+            <div class="b-page-title">Preferences</div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+
+    <div class="b-content_info-panel i-content__width_settings">
+        <div id="TabbedPanels1" class="TabbedPanels">
+            <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab" tabindex="0">SETTINGS MANAJEMENT</li>
+                <li class="TabbedPanelsTab" tabindex="0">SYSTEM TRACKING SUPPORT SETTINGS</li>
+                <li class="TabbedPanelsTab" tabindex="0">CHANGE PASSWORD</li>
+            </ul>
+            <div class="TabbedPanelsContentGroup">
+                <div class="TabbedPanelsContent">
+                    <div class="b-content__index_table">
+                        <table border="0" cellpadding="0" cellspacing="0" class="list">
+                            <tbody>
+                                <tr>
+                                    <th width="2%"> <span class="b-table__th_title">ID</span>
+                            </th>
+                            <th width="11%"> <span class="b-table__th_title">Address</span>
+                            </th>
+                            <th width="4%"> <span class="b-table__th_title">Port</span>
+                            </th>
+                            <th width="8%"> <span class="b-table__th_title">System ID</span>
+                            </th>
+                            <th width="11%"> <span class="b-table__th_title">System Password</span>
+                            </th>
+                            <th width="11%"> <span class="b-table__th_title">Interface Version</span>
+                            </th>
+                            <th width="9%"> <span class="b-table__th_title">Address TON</span>
+                            </th>
+                            <th width="8%"> <span class="b-table__th_title">Address NPI</span>
+                            </th>
+                            <th width="9%"> <span class="b-table__th_title">Address Range</span>
+                            </th>
+                            <th width="11%"> <span class="b-table__th_title">Register Delivery</span>
+                            </th>
+                            <th width="7%"> <span class="b-table__th_title">Link Status</span>
+                            </th>
+                            <th width="9%"> <span class="b-table__th_title">Actions</span>
+                            </th>
+                            </tr>
+                            <tr style="background-color:#fff1f1;">
+                                <td class="id">1</td>
+                                <td>000.000.000.000</td>
+                                <td>0000</td>
+                                <td>BUBULK001</td>
+                                <td>BULK001</td>
+                                <td>GBUBULK0001</td>
+                                <td class="id">00</td>
+                                <td class="id">00</td>
+                                <td class="id">00</td>
+                                <td class="id">4</td>
+                                <td>Disabled</td>
+                                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit.png" width="16"
+                                                                              height="16" title="Lorem ipsum"></a></div>
+                                    <div class="actions-set"><a href="#"><img src="images/icons/icon-delete.png" width="16"
+                                                                              height="16" title="Dolor sit"></a></div>
+                                    <div class="actions-set"><a href="#"><img src="images/icons/icon-enable.png" width="16"
+                                                                              height="16" title="Amet consecteur"></a></div></td>
+                            </tr>
+                            <tr style="background-color:#f5f8ef;">
+                                <td class="id">2</td>
+                                <td>000.000.000.000</td>
+                                <td>0000</td>
+                                <td>BUBULK001</td>
+                                <td>BULK001</td>
+                                <td>GBUBULK0001</td>
+                                <td class="id">00</td>
+                                <td class="id">00</td>
+                                <td class="id">00</td>
+                                <td class="id">00</td>
+                                <td>Disabled</td>
+                                <td><div class="actions-set"><a href="#"><img src="images/icons/icon-edit.png" width="16"
+                                                                              height="16" title="Lorem ipsum"></a></div>
+                                    <div class="actions-set"><a href="#"><img src="images/icons/icon-delete.png" width="16"
+                                                                              height="16" title="Dolor sit"></a></div>
+                                    <div class="actions-set"><a href="#"><img src="images/icons/icon-disable.png" width="16"
+                                                                              height="16" title="Amet consecteur"></a></div></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="TabbedPanelsContent">
+                    <div class="b-settings__title">USE:</div>
+                    <form action="" method="get">
+                        <div class="b-form__settings">
+                            <div class="b-radio__item">
+                                <input type="radio" name="#" value="#" checked>
+                                <label class="b-label_radio-button">ATI LBS</label>
+                            </div>
+                            <div class="b-radio__item">
+                                <input type="radio" name="#" value="#">
+                                <label class="b-label_radio-button">LBN FEEd</label>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="b-form_tools">
+                            <div class="b-form_tools__item">
+                                <input class="b-pin_cancel" type="button" value="CANCEL">
+                            </div>
+                            <div class="b-form_tools__item">
+                                <input class="b-pin_save" type="button" value="SAVE">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="TabbedPanelsContent">
+                    <div class="b-settings__title">CHANGE PASSWORD:</div>
+                    <form action="" method="get">
+                        <div class="b-form__settings">
+                            <div class="item_form">
+                                <label class="b-label_default">CURRENT PASSWORD</label>
+                                <input class="b-input_text" type="password" style="width:280px;"/>
+                            </div>
+                            <div class="item_form">
+                                <label class="b-label_default">NEW PASSWORD</label>
+                                <input class="b-input_text" type="password" style="width:280px;"/>
+                            </div>
+                            <div class="item_form">
+                                <label class="b-label_default">CONFIRM NEW PASSWORD</label>
+                                <input class="b-input_text" type="password" style="width:280px;"/>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="b-form_tools">
+                            <div class="b-form_tools__item">
+                                <input class="b-pin_cancel" type="button" value="CANCEL">
+                            </div>
+                            <div class="b-form_tools__item">
+                                <input class="b-pin_save" type="button" value="SAVE">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+    <script type="text/javascript">
+        var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+    </script>
+</body>
+</html>

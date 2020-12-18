@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Admin_customers_messages | Azerfon Employee Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+    
+    <!--<link rel="stylesheet" type="text/css" href="css/screen.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/jqtransform.css" media="all"/>
+    <link rel="stylesheet" href="css/jquery.ui.all.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('form').jqTransform({imgPath: 'images/interface/'});
+        });
+    </script>
+    <script src="js/jquery.ui.core.js"></script>
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.ui.datepicker.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker-from").datepicker();
+            $("#datepicker-to").datepicker();
+
+        });
+    </script>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="b-header">
+        <div class="b-sidebar_top">
+            <div class="b-nav-system_top">
+                <ul class="list">
+                    <li class="item"><a href="#">Customer Management</a></li>
+                    <li class="item"><span class="active">Messages</span></li>
+                    <li class="item"><a href="#">Preferences</a></li>
+                </ul>
+            </div>
+            <div class="l-input_logout_header"><a href="#" class="b-input-logout">Logout</a></div>
+            <div class="b-divider__sidebar_top"></div>
+            <div class="b-choice_lang">
+                <div class="b-sort_tools">
+                    <ul class="list" id="sort">
+                        <li> <a class="fly_lang" href="#" tabindex="1">RUS</a>
+                            <ul class="dropdown d2">
+                                <li class="lang"><a href="#">ENG</a></li>
+                                <li class="lang"><a href="#">AZ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="b-pin__user">
+                <div class="user-pic">
+                    <div class="b-pic-user"></div>
+                </div>
+                <div class="b-user-name">Name Surname</div>
+                <div class="b-drop__arrrow"></div>
+            </a></div>
+        <div class="clear"></div>
+        <div class="b-header__index">
+            <div class="l-logo__wrap_header"><a href="#" class="b-logo"></a></div>
+            <div class="b-name_service">
+                <div class="index">Employee Tracking System</div>
+                <div class="b-type_service">Service</div>
+            </div>
+            <div class="b-page-title">Messages</div>
+        </div>
+    </div>
+
+    <!--CONTENT-->
+    <div class="b-content_info-panel i-content__width_users-list">
+        <div class="b-filter__panel">
+            <form action="" method="get">
+                            <div class="item">
+<input type="text" placeholder="Search" class="b-input_text_search i-input_text_search_short">
+
+</div>
+            
+              <div class="item">
+                    <select name="#">
+                        <option value="opt1">Activated</option>
+                        <option value="opt2">Expire Soon</option>
+                        <option value="opt3">Expired </option>
+                        <option value="opt4">Archived</option>
+                        <option value="opt5">Customer added</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <input type="text" class="b-input_text_date" id="datepicker-from" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="item">
+                    <input type="text" class="b-input_text_date" id="datepicker-to" placeholder="dd/mm/yyyy">
+                </div>
+                
+                                <div class="item">
+                    <select name="#">
+                        <option value="opt1">Lorem ipsum</option>
+                        <option value="opt2">Dolor sit amet</option>
+                        <option value="opt3">Consecteur</option>
+                    </select>
+                </div>
+
+                
+                
+              <div class="item">
+                    <input name="" type="button" class="b-pin_search">
+                </div>
+                <div class="item">
+                    <input name="" type="reset" class="b-pin_clear" value="">
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="b-filter__panel_low-position">
+            <div class="item_title"> CUSTOMER LIST</div>
+            <div class="b-tools-panel__index">
+                <div class="sort_txt">SORT BY:</div>
+                <div class="sort">
+                    <div class="b-sort_tools">
+                        <ul class="list" id="sort">
+                            <li><a class="fly" href="#url" tabindex="1">USER NAME</a>
+                                <ul class="dropdown d2">
+                                    <li class="current">USER NAME</li>
+                                    <li><a href="#">CUSTOMER</a></li>
+                                    <li><a href="#">USER MSISDN</a></li>
+                                    <li><a href="#">DELIVERY STATUS</a></li>
+                                    <li><a href="#">QUEUDED TIME</a></li>
+                                    <li><a href="#">SEND TIME</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <table border="0" cellpadding="0" cellspacing="0" class="list">
+            <tbody>
+                <tr>
+                  <th> <span class="b-table__th_title">Customer</span>
+            </th>
+            <th> <span class="b-table__th_title">Email</span>
+            </th>
+            <th> <span class="b-table__th_title">Date</span>
+            </th>
+            <th> <span class="b-table__th_title">Reason</span>
+            </th>
+            <th> <span class="b-table__th_title">Sent Status</span>
+            </th>
+            </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>info@mail.com</td>
+                <td>dd/mm/yyy</td>
+                <td>Activated</td>
+                <td>Successful</td>
+              </tr>
+            </tbody>
+        </table>
+        <div class="PagesFlickr">
+          <div class="Paginator"> <a href="#" class="arrow-first"></a> <a href="#" class="arrow-prev"></a> <span class="this-page">1</span> <a href="/search/?q=tes&amp;page=2">2</a> <a href="/search/?q=tes&amp;page=3">3</a> <a href="/search/?q=tes&amp;page=4">4</a> <a href="/search/?q=tes&amp;page=5">5</a> <a href="/search/?q=tes&amp;page=6">6</a> <a href="/search/?q=tes&amp;page=7">7</a> <span class="break">...</span> <a href="#" class="arrow-next"></a> <a href="#" class="arrow-last"></a> </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--FOOTER-->
+
+    <div class="b-footer">
+        <div class="index">
+            <div class="item"><a href="#">Help</a></div>
+            <div class="item"><a href="#">Terms of use</a></div>
+        </div>
+        <div class="b-copy">&copy; Copyright 2013 Azerfon-Vodafone LTD. All Rights Reserved</div>
+    </div>
+</body>
+</html>
